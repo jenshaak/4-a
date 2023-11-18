@@ -1,12 +1,35 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/4a.css">
 </head>
 <body>
-    <h1>Gruppe 4a</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi minus quidem nisi. Accusantium alias officia unde, a ad quis in vero optio, totam cupiditate maxime aut at non eligendi perspiciatis.</p>
-    <p>ny push</p>
+   <div>
+      <a>
+         <canvas id="canvas1" width="300" height="300" style="border:5px solid #ff0000;"></canvas>
+
+         <svg id="circleSvg" xmlns="http://www.w3.org/2000/svg" width="300" height="200" style="border:5px solid">
+            <circle cx="10" cy="50" r="50" fill="black"></circle>
+            <circle cx="200" cy="150" r="25" fill="pink"></circle>
+         </svg>
+
+         <canvas id="context" width="200" height="200" style="border:5px solid"> 
+            <circle cx="300" cy="300" r="60" fill="green"></circle>
+            <circle cx="200" cy="50" r="40" fill="red"></circle>
+         </canvas>
+      </a>
+   </div>
+   <canvas id="canvas1" style ="border: 5px solid black"></canvas>
+
+   <script src="js/figures.js"></script>
+   <script>
+       // Call the circle function with desired parameters
+       const canvasElement = circle(50, "solid", "blue");
+
+       // Append the canvas element to the body or another container
+       document.body.appendChild(canvasElement);
+   </script>
 </body>
 </html>
