@@ -1,40 +1,49 @@
-<html>
-  <head></head>
-  <body>
-    <div>
-      <a>
-        <svg id="circle" xmlns="http://www.w3.org/2000/svg"></svg>
-      </a>
-    </div>
-    <script>
-      const svg = document.getElementById("circle");
-      svg.setAttribute("width", "100");
-      svg.setAttribute("height", "100");
+// figures.js
 
-      function createCircle(radius, mode, color) {
-        console.log("Drawing a circle");
-        // <circle cx="50" cy="50" r="50" stroke="black" fill="white" />
-        const circle = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "circle"
-        );
-        circle.setAttribute("cx", radius);
-        circle.setAttribute("cy", radius);
-        circle.setAttribute("r", radius);
-        if (mode === "outline") {
-          circle.setAttribute("stroke", color);
-        } else {
-          circle.setAttribute("fill", color);
-        }
-        return circle;
-      }
+// SVG API
+function circleSvg(radius, mode, color) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const circleElement = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
-      function overlay_xy(container, circle) {
-        container.appendChild(circle);
-      }
+    svg.setAttribute("width", radius);
+    svg.setAttribute("height", radius);
 
-      svg.appendChild(createCircle(50, "solid", "black"));
-      svg.appendChild(createCircle(25, "solid", "white"));
-    </script>
-  </body>
-</html>
+    circleElement.setAttribute("cx", radius);
+    circleElement.setAttribute("cy", radius);
+    circleElement.setAttribute("r", radius);
+
+    if (mode === "outline") {
+        circleElement.setAttribute("stroke", color);
+        circleElement.setAttribute("fill", "none");
+    } else {
+        circleElement.setAttribute("fill", color);
+        circleElement.setAttribute("stroke", "none");
+    }
+
+    svg.appendChild(circleElement);
+
+    return svg;
+}
+
+// Canvas API version
+function circle(radius, mode, color) {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    
+    canvas.width = 2 * radius;
+    canvas.height = 2 * radius;
+
+    if (mode === "outline") {
+        context.strokeStyle = color;
+        context.beginPath();
+        context.arc(radius, radius, radius, 0, 2 * Math.PI);
+        context.stroke();
+    } else {
+        context.fillStyle = color;
+        context.beginPath();
+        context.arc(radius, radius, radius, 0, 2 * Math.PI);
+        context.fill();
+    }
+
+    return canvas;
+}
