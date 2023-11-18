@@ -26,24 +26,21 @@ function circleSvg(radius, mode, color) {
 }
 
 // Canvas API version
-function circle(radius, mode, color) {
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
+//function circle(radius, mode, color) {
+    const canvas = document.getElementById('canvas1');
+    const ctx = canvas.getContext('2d');
     
-    canvas.width = 2 * radius;
-    canvas.height = 2 * radius;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-    if (mode === "outline") {
-        context.strokeStyle = color;
-        context.beginPath();
-        context.arc(radius, radius, radius, 0, 2 * Math.PI);
-        context.stroke();
-    } else {
-        context.fillStyle = color;
-        context.beginPath();
-        context.arc(radius, radius, radius, 0, 2 * Math.PI);
-        context.fill();
-    }
+        ctx.fillStyle = color;
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(radius, radius, radius, 0, Math.PI * 2);
+        ctx.fill();
+        console.log(ctx);
 
-    return canvas;
-}
+
+    //return canvas;
+//}
