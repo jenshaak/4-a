@@ -1,44 +1,35 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shapes Example</title>
-  </head>
-  <body>
-    <div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/4a.css">
+</head>
+<body>
+   <div>
       <a>
-        <svg id="circle" xmlns="http://www.w3.org/2000/svg"></svg>
+         <canvas id="canvas1" width="300" height="300" style="border:5px solid #ff0000;"></canvas>
+
+         <svg id="circleSvg" xmlns="http://www.w3.org/2000/svg" width="300" height="200" style="border:5px solid">
+            <circle cx="10" cy="50" r="50" fill="black"></circle>
+            <circle cx="200" cy="150" r="25" fill="pink"></circle>
+         </svg>
+
+         <canvas id="context" width="200" height="200" style="border:5px solid"> 
+            <circle cx="300" cy="300" r="60" fill="green"></circle>
+            <circle cx="200" cy="50" r="40" fill="red"></circle>
+         </canvas>
       </a>
-    </div>
-    <script>
-      const svg = document.getElementById("circle");
-      svg.setAttribute("width", "100");
-      svg.setAttribute("height", "100");
+   </div>
+   <canvas id="canvas1" style ="border: 5px solid black"></canvas>
 
-      function createCircle(radius, mode, color) {
-        console.log("Drawing a circle");
-        // <circle cx="50" cy="50" r="50" stroke="black" fill="white" />
-        const circle = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "circle"
-        );
-        circle.setAttribute("cx", radius);
-        circle.setAttribute("cy", radius);
-        circle.setAttribute("r", radius);
-        if (mode === "outline") {
-          circle.setAttribute("stroke", color);
-        } else {
-          circle.setAttribute("fill", color);
-        }
-        return circle;
-      }
+   <script src="js/figures.js"></script>
+   <script>
+       // Call the circle function with desired parameters
+       const canvasElement = circle(50, "solid", "blue");
 
-      function overlay_xy(container, circle) {
-        container.appendChild(circle);
-      }
-
-      svg.appendChild(createCircle(50, "solid", "black"));
-      svg.appendChild(createCircle(25, "solid", "pink"));
-    </script>
-  </body>
+       // Append the canvas element to the body or another container
+       document.body.appendChild(canvasElement);
+   </script>
+</body>
 </html>
