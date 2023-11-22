@@ -19,3 +19,73 @@
     <script type="module" src="js/shayan.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Figur-1 ."
+    ". Figur-2 ."
+    ". Figur-3 .";
+}
+
+.Figur-1 { grid-area: Figur-1; }
+
+.Figur-2 { grid-area: Figur-2; }
+
+.Figur-3 { grid-area: Figur-3; }
+
+div{
+    background-color: rgb(255, 255, 255);
+}
+
+canvas {
+      border: 1px solid #000;
+      background-color: #ccc;
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="Figur-1">
+            <h1>Her er figur i Canvas API </h1>
+            <canvas id="triforceCanvas" width="300" height="300">
+                <script src="../js/shayan.js"></script>
+            </canvas>
+        </div>
+        <div class="Figur-2">
+            <h1>Her er SVG Figuren</h1>
+            
+            <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <!-- Grey background rectangle -->
+                <rect width="100%" height="100%" fill="#ccc"/>
+            
+                <!-- Top triangle -->
+                <polygon points="150,50 85,170 210,170" fill="gold" stroke="black" stroke-width="3"/>
+            
+                <!-- Bottom-left triangle -->
+                <polygon points="85,169 30,280 150,280" fill="gold" stroke="black" stroke-width="3"/>
+            
+                <!-- Bottom-right triangle -->
+                <polygon points="210,169 270,280 150,280" fill="gold" stroke="black" stroke-width="3"/>
+            
+                <!-- Center black triangle -->
+                <polygon points="150,280 85,170 210,170" fill="black" stroke="black" stroke-width="3"/>
+              </svg>
+        </div>
+        <div class="Figur-3"></div>
+    </div>
+</body>
+</html> 
+
