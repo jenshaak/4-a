@@ -2,8 +2,8 @@
 const figures = {
 
     // Først lager vi en funksjon for å lage en sirkel, med de samme parameterne som brukes i Pyret.
-    circle: function (x, y, radius, farge, navn) {
-      var canvas = document.getElementById(navn);
+    circle: function (x, y, radius, farge, name) {
+      var canvas = document.getElementById(name);
       var circle = canvas.getContext("2d");
   
       circle.beginPath();
@@ -14,8 +14,8 @@ const figures = {
     },
     
     // Deretter lager vi en funksjon for å lage et rektangel
-    rectangle: function(x, y, lengde, bredde, farge, navn) {
-      var canvas = document.getElementById(navn);
+    rectangle: function(x, y, lengde, bredde, farge, name) {
+      var canvas = document.getElementById(name);
       var rectangle = canvas.getContext("2d");
       rectangle.beginPath();
       rectangle.rect(x, y, lengde, bredde);
@@ -25,8 +25,8 @@ const figures = {
     },
   
     // Her er funksjonen for å lage en trekant
-    trekant: function (x, y, x1, y1, x2, y2, farge, navn) {
-      var canvas = document.getElementById(navn);
+    trekant: function (x, y, x1, y1, x2, y2, farge, name) {
+      var canvas = document.getElementById(name);
       var trekant = canvas.getContext("2d");
   
       trekant.beginPath();
@@ -38,8 +38,8 @@ const figures = {
     },
     
     // Lager ellipse
-    ellipse: function (x, y, vertikalRaidus, horisontalRadius, rotation, startvinkel, farge, navn) {
-      var canvas = document.getElementById(navn);
+    ellipse: function (x, y, vertikalRaidus, horisontalRadius, rotation, startvinkel, farge, name) {
+      var canvas = document.getElementById(name);
       var ellipse = canvas.getContext("2d");
   
       ellipse.beginPath();
