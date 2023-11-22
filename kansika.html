@@ -11,6 +11,7 @@
     </a>
 </head>
 <body>
+    <h2>Her er Canvas-API</h2>
     <div class="container">
         <div class="ind-boks">
             <canvas id="kansikaCan"></canvas>
@@ -18,38 +19,22 @@
     </div>
     <script type="module" src="js/figures.js"></script>
     <script type="module" src="js/kansika.js"></script>
+    <h2>Her er SVG</h2>
     <div class="container">
         <div class="ind-boks">
 
-            <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+            <svg width="80%" height="300" xmlns="http://www.w3.org/2000/svg">
 
-                <!-- Function to create a circle -->
-                <circle cx="75" cy="35" r="30" fill="bisque" stroke="none"/>
-            
-                <!-- Function to create a rectangle -->
-                <rect x="45" y="60" width="60" height="80" fill="darkgreen" stroke="none"/>
-            
-                <!-- Function to create the left eye -->
-                <circle cx="83" cy="30" r="5" fill="black" stroke="none"/>
-            
-                <!-- Function to create the right eye -->
-                <circle cx="60" cy="30" r="5" fill="black" stroke="none"/>
-            
-                <!-- Function to create the mouth -->
-                <line x1="60" y1="50" x2="80" y2="50" stroke="black"/>
-            
-                <!-- Function to create the right arm -->
-                <line x1="48" y1="80" x2="25" y2="100" stroke="black"/>
-            
-                <!-- Function to create the left arm -->
-                <line x1="105" y1="80" x2="70" y2="100" stroke="black"/> 
+                <circle cx="150" cy="150" r="60" fill="blue" stroke="none"/>
+                <circle cx="175" cy="125" r="60" fill="orange" stroke="none"/>
             </svg>
         </div>
     </div>
-
-    <img src="gr.png" alt="Klimaforbruk" width="500" height="400">
-    <p> Kansika genererer litt over 10 kWh per dag </p>
-
+    <h2>Energiforbruk</h2>
+    <div class="container">
+        <img src="images/gr.png" alt="Klimaforbruk" width="500" height="400">
+        <p> Kansika genererer litt over 10 kWh per dag </p>
+    </div>
 
 </body>
 </html>

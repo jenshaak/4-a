@@ -5,10 +5,20 @@ html {
 h1 {
     text-align: center;
     color: #FF6D2C;
+    /* margin-top: 60px; */
+    padding-top: 60px;
+}
+
+h2 {
+    text-align: center;
+    color: #FF6D2C;
+    /* margin-top: 60px; */
+    padding-top: 60px;
 }
 
 body {
     background-color: #201F29;
+    padding-bottom: 50px;
 }
 
 .navbar {
@@ -71,6 +81,7 @@ div{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* align-items: center; */
     background: rgb(41, 41, 41);
     width: 20%;
     aspect-ratio: 1;
@@ -104,4 +115,9 @@ div{
     border: 2px solid #FF6D2C;
     color: #FF6D2C;
     border-radius: 5px;
+}
+
+p {
+    color: white;
+    text-align: center;
 }
