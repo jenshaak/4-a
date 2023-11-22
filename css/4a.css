@@ -16,6 +16,15 @@ h2 {
     padding-top: 60px;
 }
 
+h3 {
+    text-align: center;
+    color: #201F29;
+}
+
+a {
+    color: blue;
+}
+
 body {
     background-color: #201F29;
     padding-bottom: 50px;
@@ -93,12 +102,12 @@ div{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgb(255, 0, 157);
+    background: #FF6D2C;
     width: 80%;
     height: 20%;
     top: 200;
     left: 300;
-    border: 30px solid purple;
+    border: 30px solid #ffffff;
     border-width: 5px;
 }
 
