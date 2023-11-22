@@ -6,6 +6,9 @@
     <title>kansika html</title>
     <h1 class="4a">kansika</h1>
     <link rel="stylesheet" href="css/4a.css">
+    <a href="index.html" class="hjem-knapp">
+        <button>Hjem</button>
+    </a>
 </head>
 <body>
     <div class="container">
@@ -15,6 +18,34 @@
     </div>
     <script type="module" src="js/figures.js"></script>
     <script type="module" src="js/kansika.js"></script>
+    <div class="container">
+        <div class="ind-boks">
+
+            <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Function to create a circle -->
+                <circle cx="75" cy="35" r="30" fill="bisque" stroke="none"/>
+            
+                <!-- Function to create a rectangle -->
+                <rect x="45" y="60" width="60" height="80" fill="darkgreen" stroke="none"/>
+            
+                <!-- Function to create the left eye -->
+                <circle cx="83" cy="30" r="5" fill="black" stroke="none"/>
+            
+                <!-- Function to create the right eye -->
+                <circle cx="60" cy="30" r="5" fill="black" stroke="none"/>
+            
+                <!-- Function to create the mouth -->
+                <line x1="60" y1="50" x2="80" y2="50" stroke="black"/>
+            
+                <!-- Function to create the right arm -->
+                <line x1="48" y1="80" x2="25" y2="100" stroke="black"/>
+            
+                <!-- Function to create the left arm -->
+                <line x1="105" y1="80" x2="70" y2="100" stroke="black"/> 
+            </svg>
+        </div>
+    </div>
 
     <img src="gr.png" alt="Klimaforbruk" width="500" height="400">
     <p> Kansika genererer litt over 10 kWh per dag </p>

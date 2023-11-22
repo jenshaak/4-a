@@ -6,6 +6,9 @@
     <title>dennis html</title>
     <h1 class="4a">dennis</h1>
     <link rel="stylesheet" href="css/4a.css">
+    <a href="index.html" class="hjem-knapp">
+        <button>Hjem</button>
+    </a>
 </head>
 <body>
     <div class="container">
@@ -13,8 +16,24 @@
             <canvas id="dennisCan"></canvas>
         </div>
     </div>
-    <script type="module" src="js/figures.js"></script>
-    <script type="module" src="js/dennis.js"></script>
+    <div class="container">
+        <div class="ind-boks">
+            <script type="module" src="js/figures.js"></script>
+            <script type="module" src="js/dennis.js"></script>
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Function to create a triangle -->
+                <polygon points="100,30 35,170 160,170" fill="red" stroke="none"/>
+            
+                <!-- Function to create an ellipse -->
+                <ellipse cx="100" cy="100" rx="25" ry="15" fill="blue" stroke="none"/>
+            
+                <!-- Function to create a circle -->
+                <circle cx="100" cy="100" r="10" fill="yellow" stroke="none"/>
+            
+            </svg>
+        </div>
+    </div>
 
     <img src="g.PNG" alt="Klimafotavtrykk tabell" width="500" height="400">
     <p>- Dennis eier ikke bil, og derfor har han lavere direkte utslipp fra transport. </p>
