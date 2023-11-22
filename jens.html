@@ -11,21 +11,35 @@
     </a>
 </head>
 <body>
+    <h2>Her er Canvas-API</h2>
     <div class="container">
         <div class="ind-boks">
             <canvas id="jensCan"></canvas>
         </div>
     </div>
+    <h2>Her er SVG-API</h2>
     <div class="container">
         <div class="ind-boks">
-            <script type="module" src="js/figures.js"></script>
-            <script type="module" src="js/jens.js"></script>
+            <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- Function to create a square -->
+                <rect x="205" y="15" width="85" height="200" fill="black" stroke="none"/>
+                <rect x="232" y="180" width="35" height="100" fill="black" stroke="none"/>
+            
+                <!-- Function to create a circle -->
+                <circle cx="250" cy="50" r="25" fill="red" stroke="none"/>
+                <circle cx="250" cy="110" r="25" fill="yellow" stroke="none"/>
+                <circle cx="250" cy="170" r="25" fill="green" stroke="none"/>
+              </svg>
         </div>
     </div>
-
-<img src="grup.png" alt="Klimaforbruk" width="500" height="400">
-<p> Jens er dedikert til å redusere sitt klimafotavtrykk, og han har lyktes med å holde det under 10 kWh per dag. </p>
-<p> Ved å ta bussen, sykle og være bevisst på sitt energiforbruk, har Jens gjort bærekraftige valg i hverdagen.  </p>
-
+    <script type="module" src="js/figures.js"></script>
+    <script type="module" src="js/jens.js"></script>
+    <h2>Energiforbruk</h2>
+    <div class="container">
+        <img src="images/grup.png" alt="Klimaforbruk" width="500" height="400">
+        <p> Jens er dedikert til å redusere sitt klimafotavtrykk, og han har lyktes med å holde det under 10 kWh per dag. </p>
+        <p> Ved å ta bussen, sykle og være bevisst på sitt energiforbruk, har Jens gjort bærekraftige valg i hverdagen.  </p>
+    </div>
 </body>
 </html>
