@@ -1,35 +1,35 @@
 
-const canvas1 = document.getElementById('canvas1');
-const ctx1 = canvas1.getContext('2d');
-canvas1.width = window.innerWidth;
-canvas1.height = window.innerHeight;
+const canvas = document.getElementById('canvas1');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 window.addEventListener('resize', function(){
-    canvas1.width = window.innerWidth;
-    canvas1.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }); 
 
-const mouse1 = {
+const mouse = {
     x: 100,
     y: 100,
 }
 
-canvas1.addEventListener('click', function(event){
-    mouse1.x = event.x;
-    mouse1.y = event.y;
+canvas.addEventListener('click', function(event){
+    mouse.x = event.x;
+    mouse.y = event.y;
     drawCircle("30", "outline", "yellow");
 });
 
-canvas1.addEventListener('mousemove', function(event){
-    mouse1.x = event.x;
-    mouse1.y = event.y;
+canvas.addEventListener('mousemove', function(event){
+    mouse.x = event.x;
+    mouse.y = event.y;
     drawCircle("6", "fill", "purple");
 });
 
-function drawCircle(ctx, x, y, radius, mode, color){
+function drawCircle(radius, mode, color){
     ctx.lineWidth = 3;
     ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.arc(mouse.x, mouse.y, radius, 0, Math.PI * 2);
     if (mode == "outline") {
         //ctx.fillStyle = 'transparent';
         ctx.strokeStyle = color;
@@ -39,7 +39,7 @@ function drawCircle(ctx, x, y, radius, mode, color){
         ctx.fill();
     }
 }
-drawCircle(ctx1, "100", "200", "50", "outline", "yellow");
+drawCircle(50, "outline", "yellow");
 
 
 
