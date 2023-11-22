@@ -11,20 +11,35 @@ body {
     background-color: rgb(255, 127, 234);
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    padding: 10%;
+}
+
 div{
     background-color: rgb(0, 255, 42);
 }
 
+.div-boks{
+    position: relative;
+    display: inline-flexbox;
+    margin: 20px;
+}
+
 #canvas1 {
     background: rgb(54, 54, 54);
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 30%;
     top: 50px;
     left: 50px;
 }
 
 #canvas2 {
     position: right;
+    justify-content: right;
     background: red;
     width: 200px;
     height: 200px;
@@ -32,11 +47,54 @@ div{
     left: 300;
 }
 
-#boks {
+.navnOverskrift {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background: yellow;
-    width: 2000px;
-    height: 200px;
+    width: 50%;
+    height: 20%;
     top: 300;
     left: 300;
     border-width: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    /* align-content: center; */
+    margin-bottom: 20px;
+}
+
+.boks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(255, 0, 157);
+    width: 25%;
+    height: 20%;
+    top: 200;
+    left: 300;
+    border: 30px solid purple;
+    border-width: 5px;
+}
+
+.ind-boks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(255, 0, 157);
+    width: 80%;
+    height: 20%;
+    top: 200;
+    left: 300;
+    border: 30px solid purple;
+    border-width: 5px;
+}
+
+.hjem-knapp {
+    display: flex;
 }

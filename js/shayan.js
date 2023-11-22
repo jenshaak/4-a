@@ -1,4 +1,5 @@
 
+
                 // Get the canvas element and its 2d context
                 const canvas = document.getElementById('triforceCanvas');
                 const ctx = canvas.getContext('2d');
@@ -69,3 +70,4 @@
             
                 <polygon points="150,280 85,170 210,170" fill="black" stroke="black" stroke-width="3"/>
               </svg> */
+ 

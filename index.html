@@ -3,35 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jens html</title>
+    <title>Index html</title>
     <h1 class="4a">4a</h1>
     <link rel="stylesheet" href="css/4a.css">
     <style>
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div>
-            <div>
-                <canvas id="canvas1"></canvas>
-                <script src="js/figures.js"></script>        
-            </div>
+    <div class="container">
+        <div class="boks">
+            <a href="adrian.html">
+                <div class="navnOverskrift"> Adrian </div>
+            </a>
+                <canvas id="adrianCan"></canvas>
+        </div>
+        <div class="boks">
+            <a href="shayan.html">
+                <div class="navnOverskrift"> Shayan </div>
+            </a>
+            <canvas id="shayanCan"></canvas>
+        </div>
+        <div class="boks">
+            <a href="camilla.html">
+                <div class="navnOverskrift"> Camilla </div>
+            </a>
+            <canvas id="camillaCan"></canvas>
         </div>
     </div>
-
-
-    <div class="boks">
-        <div>
-            <div>
-                <canvas id="canvas1"></canvas>
-                <script src="js/figures.js"></script>        
-            </div>
+    <div class="container">
+        <div class="boks">
+            <a href="kansika.html">
+                <div class="navnOverskrift"> Kansika </div>
+            </a>
+            <canvas id="kansikaCan"></canvas>
         </div>
-    </div>
-    <div>
-        <div>
-            <canvas id="canvas2"></canvas>
-            <script src="js/figures.js"></script>        
+        <div class="boks">
+            <a href="dennis.html">
+                <div class="navnOverskrift"> Dennis </div>
+            </a>
+            <canvas id="dennisCan"></canvas>
+        </div>
+        <div class="boks">
+            <a href="jens.html">
+                <div class="navnOverskrift"> Jens </div>
+            </a>
+            <canvas id="jensCan"></canvas>
         </div>
     </div>
     <div>
@@ -42,13 +58,13 @@
             </svg>
         </div>
     </div>
-    <div>
-        <div>
-            <svg id="rectSvg" xmlns="http://www.w3.org/2000/svg" width="300" height="200" style="border:5px solid">
-                <rect cx="100" cy="50" w="50" h="70" fill="black"></rect>
-                <rect cx="200" cy="150" w="40" h="100" fill="pink"></rect>
-            </svg>
-        </div>
-    </div>
+    <script type="module" src="js/figures.js"></script>
+    <script type="module" src="js/jens.js"></script>
+    <script type="module" src="js/shayan.js"></script>
+    <script type="module" src="js/dennis.js"></script>
+    <script type="module" src="js/adrian.js"></script>
+    <script type="module" src="js/kansika.js"></script>
+    <script type="module" src="js/camilla.js"></script>
 </body>
 </html>
+

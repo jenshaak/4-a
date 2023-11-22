@@ -1,72 +1,68 @@
-
-const canvas1 = document.getElementById('canvas1');
-const ctx1 = canvas1.getContext('2d');
-canvas1.width = window.innerWidth;
-canvas1.height = window.innerHeight;
-
-window.addEventListener('resize', function(){
-    canvas1.width = window.innerWidth;
-    canvas1.height = window.innerHeight;
-}); 
-
-const mouse1 = {
-    x: 100,
-    y: 100,
-}
-
-canvas1.addEventListener('click', function(event){
-    mouse1.x = event.x;
-    mouse1.y = event.y;
-    drawCircle("30", "outline", "yellow");
-});
-
-canvas1.addEventListener('mousemove', function(event){
-    mouse1.x = event.x;
-    mouse1.y = event.y;
-    drawCircle("6", "fill", "purple");
-});
-
-function drawCircle(ctx, x, y, radius, mode, color){
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    if (mode == "outline") {
-        //ctx.fillStyle = 'transparent';
-        ctx.strokeStyle = color;
-        ctx.stroke();
-    } else {
-        ctx.fillStyle = color;
-        ctx.fill();
-    }
-}
-drawCircle(ctx1, "100", "200", "50", "outline", "yellow");
-
-
-
-
-
-
-const canvas2 = document.getElementById('canvas2');
-const ctx2 = canvas2.getContext('2d');
-canvas2.width = window.innerWidth;
-canvas2.height = window.innerHeight;
-
-window.addEventListener('resize', function(){
-    canvas2.width = window.innerWidth;
-    canvas2.height = window.innerHeight;
-}); 
-
-function drawRect(ctx, x, y, width, height, mode, color){
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    ctx.rect(x, y, width, height, 0, Math.PI * 2);
-    if (mode == "outline") {
-        ctx.strokeStyle = color;
-        ctx.stroke();
-    } else {
-        ctx.fillStyle = color;
-        ctx.fill();
-    }
-}
-
-drawRect(ctx2, "200", "200", "70", "90", "outline", "yellow"); 
+//Lager en const for alle funksjonene sånn at man kan pakke den opp og sende den til andre javascript filer.
+const figures = {
+    //Her har vi laget en funksjon for å lage en circle.
+    circle: function (x, y, radius, farge, navn) {
+      var canvas = document.getElementById(navn);
+      var circle = canvas.getContext("2d");
+  
+      circle.beginPath();
+      circle.arc(x, y, radius, 0, 2 * Math.PI);
+      circle.stroke();
+      circle.fillStyle = farge;
+      circle.fill();
+    },
+    // Her har vi laget en funksjon for å lage rectangle / rektangel.
+    rectangle: function(x, y, lengde, bredde, farge, navn) {
+      var canvas = document.getElementById(navn);
+      var rectangle = canvas.getContext("2d");
+      rectangle.beginPath();
+      rectangle.rect(x, y, lengde, bredde);
+      rectangle.stroke();
+      rectangle.fillStyle = farge;
+      rectangle.fill();
+    },
+  
+    // Her har vi laget en funksjon for å lage trekant.
+    trekant: function (x, y, x1, y1, x2, y2, farge, navn) {
+      var canvas = document.getElementById(navn);
+      var trekant = canvas.getContext("2d");
+  
+      trekant.beginPath();
+      trekant.moveTo(x, y);
+      trekant.lineTo(x1, y1);
+      trekant.lineTo(x2, y2);
+      trekant.fillStyle = farge;
+      trekant.fill();
+    },
+    
+    ellipse: function (
+      x,
+      y,
+      vertikalRaidus,
+      horisontalRadius,
+      rotering,
+      startvinkel,
+      farge,
+      navn
+    ) {
+      var canvas = document.getElementById(navn);
+      var ellipse = canvas.getContext("2d");
+  
+      ellipse.beginPath();
+      ellipse.ellipse(
+        x,
+        y,
+        vertikalRaidus,
+        horisontalRadius,
+        rotering,
+        startvinkel,
+        2 * Math.PI
+      );
+      ellipse.stroke();
+      ellipse.fillStyle = farge;
+      ellipse.fill();
+    }, 
+  };
+  
+  // Eksporterer funksjonene fra konstanten.
+  export default figures;
