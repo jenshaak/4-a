@@ -1,26 +1,26 @@
 html {
-    background-color: aquamarine;
+    background-color: #FF6D2C;
 }
 
 h1 {
     text-align: center;
-    color: yellow;
+    color: #FF6D2C;
 }
 
 body {
-    background-color: rgb(255, 127, 234);
+    background-color: #201F29;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: purple;
+    background: #201F29;
     padding: 10%;
 }
 
 div{
-    background-color: rgb(0, 255, 42);
+    background-color: #201F29;
 }
 
 .div-boks{
@@ -51,11 +51,9 @@ div{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: yellow;
-    width: 50%;
-    height: 20%;
-    top: 300;
-    left: 300;
+    background: #201F29;
+    width: 100%;
+    aspect-ratio: 8 / 1;
     border-width: 5px;
 }
 
@@ -73,12 +71,10 @@ div{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: rgb(255, 0, 157);
-    width: 25%;
-    height: 20%;
-    top: 200;
-    left: 300;
-    border: 30px solid purple;
+    background: rgb(41, 41, 41);
+    width: 20%;
+    aspect-ratio: 1;
+    border: 30px solid #FF6D2C;
     border-width: 5px;
 }
 
@@ -97,4 +93,15 @@ div{
 
 .hjem-knapp {
     display: flex;
+}
+
+.knapp {
+    display: inline-block;
+    font-size:larger;
+    text-align: center;
+    margin-left: 5px;
+    width: 100px;
+    border: 2px solid #FF6D2C;
+    color: #FF6D2C;
+    border-radius: 5px;
 }
