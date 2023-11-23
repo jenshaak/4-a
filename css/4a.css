@@ -40,6 +40,7 @@ body {
 
 div{
     background-color: #201F29;
+    /* align-items: center; */
 }
 
 .div-boks{
@@ -51,7 +52,7 @@ div{
 #canvas1 {
     background: rgb(54, 54, 54);
     width: 70%;
-    height: 30%;
+    height: 70%;
     top: 50px;
     left: 50px;
 }
@@ -100,7 +101,7 @@ div{
 
 .ind-boks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     background: #FF6D2C;
     width: 80%;
@@ -130,3 +131,4 @@ p {
     color: white;
     text-align: center;
 }
+
