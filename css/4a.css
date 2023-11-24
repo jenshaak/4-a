@@ -99,6 +99,19 @@ div{
     border-width: 5px;
 }
 
+.om-boks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FF6D2C;
+    width: 80%;
+    height: 20%;
+    top: 200;
+    left: 300;
+    border: 30px solid #ffffff;
+    border-width: 5px;
+}
+
 .ind-boks {
     display: flex;
     flex-direction: row;
